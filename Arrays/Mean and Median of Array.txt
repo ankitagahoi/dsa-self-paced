@@ -1,0 +1,39 @@
+
+//User function Template for Java
+
+class Solution
+{
+  //Function to find median of the array elements.  
+  public int median(int A[],int N)
+    {
+      
+       Arrays.sort(A);
+       int median = 0;
+       int m = N/2;
+       if(N % 2 == 1){
+          return A[m]; 
+       } else {
+          if(m > 0){
+             median = (A[m] + A[m-1])/2; 
+          } 
+          else{
+              median = A[m];
+          }
+          return median;
+       }
+       //Your code here
+       //If median is fraction then conver it to integer and return
+    }
+    //Function to find median of the array elements.
+    public int mean(int A[],int N)
+    {
+        int mean = 0;
+       for(int i = 0; i < N; i++){
+           mean += A[i];
+           
+       }
+       return mean/N;
+    }
+
+}
+
